@@ -1,0 +1,40 @@
+{
+  "name": "php-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:db": "npx json-server data/db.json",
+    "start:server": "npx live-server --port=3001 --ignore=**/data/* .",
+    "start:php": "php -S localhost:8000",
+    "start": "concurrently \"gulp\" \"npm run start:db\" \"npm run start:server\" \"npm run start:php\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-optipng": "^8.0.0",
+    "json-server": "^1.0.0-beta.3",
+    "live-server": "^1.2.2",
+    "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "owl.carousel": "^2.3.4",
+    "toastify": "^2.0.1",
+    "toastify-js": "^1.12.0"
+  }
+}
