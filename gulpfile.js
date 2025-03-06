@@ -9,7 +9,6 @@ import imagemin from "gulp-imagemin";
 import imageminOptipng from "imagemin-optipng";
 import Toastify from "toastify-js";
 
-
 const sassWithCompiler = gulpSass(sass);
 
 const paths = {

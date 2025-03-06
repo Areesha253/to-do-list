@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+<LimitExcept GET POST PUT PATCH DELETE>
+    Order Allow,Deny
+    Allow from all
+</LimitExcept>

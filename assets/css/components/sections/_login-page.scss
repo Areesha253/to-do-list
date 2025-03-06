@@ -1,0 +1,71 @@
+@use "abstracts/mixins";
+@use "abstracts/functions";
+@use "abstracts/variables";
+
+.login-wrapper {
+  font-family: "Montserrat";
+  background: #eaf4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: #d4f2d2;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 500px;
+  text-align: center;
+  h2 {
+    font-family: "Montserrat-Bold";
+    font-weight: 900;
+    font-size: functions.rem(34);
+    margin-bottom: 15px;
+    color: #373f47;
+  }
+
+  .error {
+    color: variables.$error-color;
+    font-size: 14px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid #373f47;
+      background: transparent;
+      font-size: 18px;
+      color: #373f47;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+      &::placeholder {
+        color: #828388;
+      }
+    }
+
+    button {
+      background: variables.$primary-color;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #34113f;
+      }
+    }
+  }
+}

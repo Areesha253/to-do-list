@@ -1,0 +1,54 @@
+@use "abstracts/mixins";
+@use "abstracts/functions";
+@use "abstracts/variables";
+
+.container {
+  background-color: #add8e6;
+  padding: 20px;
+  border-radius: 25px;
+  .main-heading {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+}
+#taskList {
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variables.$light-bg;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    .checkbox-with-task-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .status-checkbox {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        &:checked {
+          accent-color: variables.$success-color;
+        }
+      }
+      .task-text {
+        font-size: functions.rem(18);
+        pointer-events: none;
+      }
+    }
+  }
+}
+button {
+  border-radius: 5px;
+  cursor: pointer;
+  &.btn-primary {
+    background-color: variables.$primary-color;
+  }
+  &.btn-danger {
+    background-color: variables.$danger-color;
+  }
+}
