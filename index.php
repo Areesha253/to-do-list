@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {
-  header("Location: admin.html");
+if (isset($_SESSION['username'])) {
+  header("Location: admin.php");
   exit();
 }
 ?>
@@ -12,29 +12,22 @@ if (!isset($_SESSION['username'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TO-DO LIST</title>
+  <title>User Login</title>
   <link rel="stylesheet" href="dist/css/vendors.min.css" />
   <link rel="stylesheet" href="dist/css/style.css" />
 </head>
 
 <body>
-  <button class="logout-btn btn-primary btn m-3" id="logout-button">Logout</button>
-  <hr class="m-2" />
-  <div class="container mt-3">
-    <h2 class="text-left main-heading">To-Do List</h2>
-    <form id="taskForm" method="post">
-      <div class="input-group my-3">
-        <input type="text" name="task" id="taskInput" class="form-control" placeholder="Enter a task..." required />
-        <button type="submit" class="btn btn-primary">Add Task</button>
-      </div>
-    </form>
-    <ul id="taskList" class="list-group">
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    </ul>
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>USER LOGIN</h2>
+      <form method="POST" id="user-login-form">
+        <input type="text" name="username" id="username" required placeholder="Username" />
+        <input type="password" name="password" id="password" required placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+      <p>Not registered? <a class="registration-link" href="register.php">Click to register</a></p>
+    </div>
   </div>
 
   <script type="text/javascript" src="dist/js/vendors.min.js"></script>

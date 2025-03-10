@@ -23,20 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         echo json_encode($tasks);
         return;
     }
-
-    // if ($method_name === 'get_single') {
-    //     $id = $_GET['id'];
-    //     $sql = "SELECT * FROM tasks WHERE id=" . $id;
-    //     $result = $conn->query($sql);
-    //     $tasks = [];
-    //     while ($row = $result->fetch_assoc()) {
-    //         $tasks[] = $row;
-    //     }
-    //     set_headers();
-
-    //     echo json_encode($tasks);
-    //     return;
-    // }
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2025 at 03:59 PM
+-- Generation Time: Mar 10, 2025 at 06:49 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,17 +33,6 @@ CREATE TABLE `tasks` (
   `status` enum('pending','completed') DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `tasks`
---
-
-INSERT INTO `tasks` (`id`, `task`, `status`) VALUES
-(540, 'australia', 'pending'),
-(541, 'india', 'pending'),
-(542, 'pakistan', 'pending'),
-(544, 'Africa', 'pending'),
-(547, 'sweden', 'pending');
-
 -- --------------------------------------------------------
 
 --
@@ -61,8 +50,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(3, 'areesha', '$2y$10$dfQWldECRHpjRHuL7.824ezWqJBxETOjvjFwE/IlUm1s2fd2yrWM.'),
-(4, 'osama', '$2y$10$6cm5HAChrfwh0X5Yu51fn.h1KBUXNb8ReOI6ldhPIZSFDRdqQTyf.');
+(3, 'areesha', '$2y$10$dfQWldECRHpjRHuL7.824ezWqJBxETOjvjFwE/IlUm1s2fd2yrWM.');
 
 --
 -- Indexes for dumped tables
@@ -89,13 +77,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=548;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=557;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

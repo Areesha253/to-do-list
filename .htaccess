@@ -1,8 +1,8 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-</IfModule>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
 
-<LimitExcept GET POST PUT PATCH DELETE>
-    Order Allow,Deny
-    Allow from all
-</LimitExcept>
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html

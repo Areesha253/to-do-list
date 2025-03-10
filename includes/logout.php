@@ -1,7 +1,6 @@
 <?php
 session_start();
-session_unset();
 session_destroy();
 
-header("Location: ../admin.html");
+header("Location: ../index.php");
 exit();
